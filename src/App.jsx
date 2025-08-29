@@ -5,6 +5,7 @@ import './App.css';
 import Counter from './components/Counter';
 import Todo from './components/Todo';
 import SearchField from './components/ReduxDebouncedSearch';
+import Stopwatch from './components/Stopwatch';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,7 +16,8 @@ function App() {
         {/* <Counter /> */}
         {/* <Todo /> */}
         {/* <SearchField /> */}
-        <SearchField />
+        {/* <SearchField /> */}
+        <Stopwatch />
       </div>
     </>
   );
