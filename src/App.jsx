@@ -19,6 +19,7 @@ import Dropdown from './components/ReusableDropDown';
 import SearchableSelect from './components/ReusableSearchDropdown';
 import Select from './components/ReusableSearchDropdown';
 import MultiSelect from './components/MultiSelectDropdown';
+import WebSocketExample from './components/Websocket';
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -83,7 +84,7 @@ function App() {
 
         {/* Multi select starts */}
 
-        <div style={{ padding: 20 }}>
+        {/* <div style={{ padding: 20 }}>
           <h1>Reusable Multi-Select Component</h1>
 
           <MultiSelect
@@ -94,9 +95,11 @@ function App() {
           />
 
           <p>Selected: {selected.length > 0 ? selected.join(', ') : 'None'}</p>
-        </div>
+        </div> */}
 
         {/* Multiselect ends */}
+
+        <WebSocketExample />
       </div>
     </>
   );
