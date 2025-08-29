@@ -14,10 +14,12 @@ import NumberedPagination from './components/ManualPaginationWithNumbers';
 import ProductList from './components/ProductList';
 import Cart from './components/ContextCart';
 import { useTheme } from './context/ThemeContext';
+import Modal from './components/Modal';
 
 function App() {
-  const [count, setCount] = useState(0);
-  const { theme, toggleTheme } = useTheme();
+  // const [count, setCount] = useState(0);
+  // const { theme, toggleTheme } = useTheme();
+  const [isModalOpen, setModalOpen] = useState(false);
 
   return (
     <>
@@ -31,9 +33,19 @@ function App() {
         {/* <InfiniteScrollAPI /> */}
         {/* <ManualPagination /> */}
         {/* <NumberedPagination /> */}
-        <ProductList />
+        {/* <ProductList />
         <Cart />
-        <button onClick={() => toggleTheme()}>Change Theme</button>
+        <button onClick={() => toggleTheme()}>Change Theme</button> */}
+
+        <div style={{ padding: 20 }}>
+          <h1>Reusable Modal Example</h1>
+          <button onClick={() => setModalOpen(true)}>Open Modal</button>
+
+          <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+            <h2>Hello from Modal 👋</h2>
+            <p>This is a reusable modal component.</p>
+          </Modal>
+        </div>
       </div>
     </>
   );
