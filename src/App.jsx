@@ -7,6 +7,10 @@ import Todo from './components/Todo';
 import SearchField from './components/ReduxDebouncedSearch';
 import Stopwatch from './components/Stopwatch';
 import SignupForm from './components/FormValidationReducer';
+// import InfiniteScroll from './components/InfiniteScrollList';
+import InfiniteScrollAPI from './components/InfiniteScrollApi';
+import ManualPagination from './components/ManualPagination';
+import NumberedPagination from './components/ManualPaginationWithNumbers';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,7 +23,10 @@ function App() {
         {/* <SearchField /> */}
         {/* <SearchField /> */}
         {/* <Stopwatch /> */}
-        <SignupForm />
+        {/* <SignupForm /> */}
+        {/* <InfiniteScrollAPI /> */}
+        {/* <ManualPagination /> */}
+        <NumberedPagination />
       </div>
     </>
   );
