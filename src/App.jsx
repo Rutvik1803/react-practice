@@ -18,12 +18,13 @@ import Modal from './components/Modal';
 import Dropdown from './components/ReusableDropDown';
 import SearchableSelect from './components/ReusableSearchDropdown';
 import Select from './components/ReusableSearchDropdown';
+import MultiSelect from './components/MultiSelectDropdown';
 
 function App() {
   // const [count, setCount] = useState(0);
   // const { theme, toggleTheme } = useTheme();
   // const [isModalOpen, setModalOpen] = useState(false);
-  const [selected, setSelected] = useState('');
+  const [selected, setSelected] = useState([]);
   const fruits = ['Apple', 'Banana', 'Mango', 'Orange', 'Pineapple', 'Papaya'];
 
   return (
@@ -65,7 +66,7 @@ function App() {
           />
         </div> */}
 
-        <div style={{ padding: 20 }}>
+        {/* <div style={{ padding: 20 }}>
           <h1>Reusable Select Component</h1>
 
           <Select
@@ -77,8 +78,25 @@ function App() {
           />
 
           <p>Selected: {selected || 'None'}</p>
-        </div>
+        </div> */}
         {/* Reusabel Drop down code ends from here ------------------------------ */}
+
+        {/* Multi select starts */}
+
+        <div style={{ padding: 20 }}>
+          <h1>Reusable Multi-Select Component</h1>
+
+          <MultiSelect
+            label="Choose Fruits"
+            options={fruits}
+            values={selected}
+            onChange={setSelected}
+          />
+
+          <p>Selected: {selected.length > 0 ? selected.join(', ') : 'None'}</p>
+        </div>
+
+        {/* Multiselect ends */}
       </div>
     </>
   );
