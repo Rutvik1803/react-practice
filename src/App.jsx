@@ -15,11 +15,16 @@ import ProductList from './components/ProductList';
 import Cart from './components/ContextCart';
 import { useTheme } from './context/ThemeContext';
 import Modal from './components/Modal';
+import Dropdown from './components/ReusableDropDown';
+import SearchableSelect from './components/ReusableSearchDropdown';
+import Select from './components/ReusableSearchDropdown';
 
 function App() {
   // const [count, setCount] = useState(0);
   // const { theme, toggleTheme } = useTheme();
-  const [isModalOpen, setModalOpen] = useState(false);
+  // const [isModalOpen, setModalOpen] = useState(false);
+  const [selected, setSelected] = useState('');
+  const fruits = ['Apple', 'Banana', 'Mango', 'Orange', 'Pineapple', 'Papaya'];
 
   return (
     <>
@@ -36,8 +41,8 @@ function App() {
         {/* <ProductList />
         <Cart />
         <button onClick={() => toggleTheme()}>Change Theme</button> */}
-
-        <div style={{ padding: 20 }}>
+        {/* Modal usage code start */}
+        {/* <div style={{ padding: 20 }}>
           <h1>Reusable Modal Example</h1>
           <button onClick={() => setModalOpen(true)}>Open Modal</button>
 
@@ -45,7 +50,35 @@ function App() {
             <h2>Hello from Modal 👋</h2>
             <p>This is a reusable modal component.</p>
           </Modal>
+        </div> */}
+        {/* Modal usage code ends here --------------------------------- */}
+
+        {/* Reusabel Drop down code starts from here ------------------------------ */}
+        {/* <div style={{ padding: 20 }}>
+          <h1>Reusable Dropdown Example</h1>
+          <p>Selected: {selected}</p>
+
+          <Dropdown
+            label="Select Fruit"
+            options={['Apple', 'Banana', 'Mango', 'Orange']}
+            onSelect={(option) => setSelected(option)}
+          />
+        </div> */}
+
+        <div style={{ padding: 20 }}>
+          <h1>Reusable Select Component</h1>
+
+          <Select
+            label="Choose a Fruit"
+            options={fruits}
+            value={selected}
+            onChange={setSelected}
+            placeholder="-- Select Fruit --"
+          />
+
+          <p>Selected: {selected || 'None'}</p>
         </div>
+        {/* Reusabel Drop down code ends from here ------------------------------ */}
       </div>
     </>
   );
