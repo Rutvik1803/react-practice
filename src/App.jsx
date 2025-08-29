@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg';
 import './App.css';
 import Counter from './components/Counter';
 import Todo from './components/Todo';
-import SearchField from './components/SearchField';
+import SearchField from './components/ReduxDebouncedSearch';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +14,7 @@ function App() {
       <div>
         {/* <Counter /> */}
         {/* <Todo /> */}
+        {/* <SearchField /> */}
         <SearchField />
       </div>
     </>
