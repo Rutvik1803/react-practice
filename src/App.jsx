@@ -6,6 +6,7 @@ import Counter from './components/Counter';
 import Todo from './components/Todo';
 import SearchField from './components/ReduxDebouncedSearch';
 import Stopwatch from './components/Stopwatch';
+import SignupForm from './components/FormValidationReducer';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,7 +18,8 @@ function App() {
         {/* <Todo /> */}
         {/* <SearchField /> */}
         {/* <SearchField /> */}
-        <Stopwatch />
+        {/* <Stopwatch /> */}
+        <SignupForm />
       </div>
     </>
   );
